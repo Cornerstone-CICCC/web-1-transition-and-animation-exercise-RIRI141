@@ -1,0 +1,81 @@
+.yellow-circle {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  
+    transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+  
+    animation-name: circleMove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  
+  .yellow-circle:hover {
+    opacity: 0;
+  }
+  
+  @keyframes circleMove {
+    0%, 100% {
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+    }
+    25% {
+      top: 0;
+      left: calc(100% - 100px);
+      border-radius: 0;
+    }
+    50% {
+      top: calc(100% - 100px);
+      left: calc(100% - 100px);
+      border-radius: 50%;
+    }
+    75% {
+      top: calc(100% - 100px);
+      left: 0;
+      border-radius: 0;
+    }
+  }
+  
+  .bar {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border: 2px solid #111d51;
+  }
+  
+  .loading-subtitle {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    font-size: large;
+    font-family: monospace;
+  }
+  
+  .progress {
+    width: 0;
+    height: 100px;
+    background-color: #b9dd18fd;
+  
+    animation-name: progressing;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes progressing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
